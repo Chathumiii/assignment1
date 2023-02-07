@@ -25,7 +25,6 @@ on:
 env:
   APPLICATION_ECR_PREFIX:  application
   DATABASE_ECR_PREFIX: database
-  ECR_REPOSITORY:  assignment1
   WORKING_DIR: application/
   AWS_REGION: us-east-1
   
