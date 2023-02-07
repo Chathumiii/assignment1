@@ -3,18 +3,21 @@ name: Deploy to ECR
 on:
   workflow_dispatch:
     branches:
-    - dev 
+    - prod
+    - dev
     paths:
     - application/**
   
   push:
     branches:
-     - dev
+    - prod
+    - dev
     paths:
     - application/**
 
   pull_request:
     branches:
+    - prod
     - dev
     paths:
     - application/**
