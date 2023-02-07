@@ -2,7 +2,7 @@ name: Deploy to ECR
 
 on: 
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   
@@ -29,8 +29,8 @@ jobs:
     - name: Build, test, tag, and push images to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY_WEB: my-webapp-images
-        ECR_REPOSITORY_DB: my-sql-images
+        ECR_REPOSITORY_WEB: database
+        ECR_REPOSITORY_DB: application
         IMAGE_TAG: v0.1
       run: |
         ls -ltra
